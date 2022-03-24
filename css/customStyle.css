@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(175, 169, 169, 0.404);
+}
+nav a:hover,
+nav a:target,
+nav a:focus,
+nav a:active {
+  color: crimson;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.3s ease-in;
+}
+:any-link {
+  color: whitesmoke;
+  font-size: 14px;
+}
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+main {
+  width: 90%;
+  margin: auto;
+}
+nav {
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  grid-template-rows: 10vh;
+  background: rgba(0, 0, 0, 0.945);
+  overflow: hidden;
+}
+nav .container {
+  max-width: 100px;
+}
+nav .link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0.1em;
+  padding: 0.1em;
+  height: 55%;
+  z-index: 999;
+}
+nav a:last-child {
+  margin-right: 0.5em;
+}
+.carousel-item {
+  height: 70vh;
+}
+@media screen and (max-width: 700px) {
+  main {
+    width: 100%;
+  }
+  :any-link {
+    font-size: 13px;
+  }
+  .carousel-item {
+    height: 50vh;
+  }
+  .carousel-indicators {
+    top: 15em;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: -4em;
+  }
+  nav a:hover {
+    border: none;
+  }
+  #tableaux{
+    overflow-x: scroll;
+  }
+  .pub {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "first second"
+                          "third fourth";
+
+  }
+}
+#data {
+  position: relative;
+  top: -2em;
+  background: #fff;
+  width: 95%;
+  margin: auto;
+  border-radius: 4px;
+}
+legend {
+  font-family: lobster;
+}
+fieldset {
+  border: none;
+  width: 95%;
+  margin: auto;
+  border-radius: 8px;
+}
+input,
+select {
+  border-radius: 4px;
+  border: none;
+  height: 25px;
+  width: 60%;
+  outline: none;
+  background: rgb(231, 226, 226);
+  float: right;
+  margin: 0 0.5em 0 0;
+}
+
+button {
+  height: 25px;
+  border: none;
+  border-radius: 8px;
+  margin: .5em 0.5em .5em .5em;
+  float: right;
+  background-color: #edf;
+}
+table button{
+  margin: .5em 0 .5em 0;
+  height: 50%;
+  width: 100%;
+}
+label {
+  font-family: "Poppin Sans";
+  font-weight: 400;
+}
+@media screen and (min-width: 700px) {
+  .pub {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "first second third fourth";
+  }
+}
+
+#tableaux{
+  width: 95%;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  border-radius: 4px;
+  padding: .2em;
+}
+
+table{
+  width: 98%;
+  margin: auto;
+  border: 1px solid rgb(177, 173, 173);
+  text-align: center;  
+}
+tbody{
+  font-weight: 100;
+  font-family: "";
+}
+.container-fluid{
+  background: rgba(0, 0, 0, 0.61);
+  padding: 1em 0.1em 1em 0.1em;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto;
+  margin-top: 2em;
+  width: 800px;
+}
+.container-fluid ul{
+  display: flex;
+  width:90%;
+  flex-direction: column;
+  position: relative;
+  left: 0;
+}
+.container-fluid ul li{
+  list-style-type: none;
+  width: 100%;
+  margin: .1em 0em .1em 0;
+  display: flex;
+}
+.container-fluid ul li img{
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.container-fluid ul li p{
+  transform: translate(-10%,0.1em);
+  opacity: 0;
+}
+.container-fluid ul li:hover p{
+  transform: translate(1em,0.1em);
+  opacity: 1;
+  transition: all .5s ease-in;
+} 
+#ffieldset{
+  margin: 0;
+}
+#impressMain{
+  background-color: #fff;
+  height: 100vh;
+
+}
+.impression{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  top: 100px;
+  border: 1px solid whitesmoke;
+  padding: 1em;
+  border-radius: 4px;
+  background-color: rgba(175, 169, 169, 0.404);
+  max-width: 400px;
+}
+
+.impression .entete{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+}
+.impression .entete p{
+  font-family: lobster;
+}
+.impression .entete img{
+  width: 45%;
+  height: 30px;
+  background-color: #000;
+  align-self: center;
+  border-radius: 4px;
+  padding: .2em;
+}
+.impression .corps{
+  display: flex;
+  justify-content: space-between;
+}
+.impression .corps .attr{
+  font-family: "apple geramond";
+}
+.impression .corps .val{
+  font-weight: 500;
+  font-family: monospace;
+}
+.impression .corps .val p{
+  height: 22px;
+}
+
+.pub{
+  display: grid;
+  grid-gap: .2em;
+  padding: .2em;
+  width: 98%;
+  margin: auto;
+}
+.card:nth-child(1){
+  grid-area: first;
+}
+.card:nth-child(2){
+  grid-area: second;
+}
+.card:nth-child(3){
+  grid-area: third;
+}
+.card:nth-child(4){
+  grid-area: fourth;
+}
+.card{
+  display: flex;
+}
+.card img{
+  width: 98%;
+  height: 60px;
+  margin: .5em 0 .5em 0;
+}
+.card p{
+  padding: .5em;
+  margin: auto;
+  text-align: center;
+}
